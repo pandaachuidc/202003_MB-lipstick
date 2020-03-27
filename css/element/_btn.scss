@@ -1,0 +1,131 @@
+/*!
+Pure v1.0.0
+Copyright 2013 Yahoo!
+Licensed under the BSD License.
+https://github.com/yahoo/pure/blob/master/LICENSE.md
+*/
+.e-btn {
+  /* Structure */
+  display: inline-block;
+  zoom: 1;
+  line-height: normal;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+/* Firefox: Get rid of the inner focus border */
+.e-btn::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+/* Inherit .pure-g styles */
+.e-btn-group {
+  letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
+  *letter-spacing: normal; /* reset IE < 8 */
+  *word-spacing: -0.43em; /* IE < 8: collapse white-space between units */
+  text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */
+}
+
+.opera-only :-o-prefocus,
+.e-btn-group {
+  word-spacing: -0.43em;
+}
+
+.e-btn-group .e-btn {
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+  text-rendering: auto;
+}
+
+// lancome style
+
+.lancome-btn {
+  &__link {
+    color: #fff;
+    background: #000;
+    text-align: center;
+    padding: 1.5rem;
+    display: inline-block;
+    font-size: $font-m;
+    font-weight: bold;
+    padding: 12px 40px;
+    letter-spacing: 0.1em;
+    border: 1px solid #000;
+    -webkit-box-shadow: 0 0 10px #fff;
+    box-shadow: 0 0 10px #fff;
+    -webkit-transition: background-color 0.25s ease-out, color 0.25s ease-out, border-color 0.25s ease-out;
+    -o-transition: background-color 0.25s ease-out, color 0.25s ease-out, border-color 0.25s ease-out;
+    transition: background-color 0.25s ease-out, color 0.25s ease-out, border-color 0.25s ease-out;
+  }
+  &__link--hover{
+        &:hover {
+        transition: all 0.5s ease;
+        transform: scale(0.9);
+        background: #fff;
+        border: 1px solid #000;
+        color: #000;
+      }
+  }
+}
+
+.button-wrap-button {
+  position: relative;
+  transition: border-radius 0.3s 0.4s cubic-bezier(0.18, 0.06, 0.23, 1),
+  border-color 0.3s 0.4s cubic-bezier(0.18, 0.06, 0.23, 1);
+  border-radius: 30px;
+  outline: none;
+  overflow: hidden;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    background-color: rgba(0, 0, 0, 0.8);
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: height 0.3s 0.2s cubic-bezier(0.69, 0.01, 0.2, 0.99);
+  }
+  &:hover .button-icon {
+    transform: translate3d(0, 0, 0) rotate(180deg);
+  }
+  .button-text {
+    margin-right: 50px;
+  }
+  .button-icon {
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    width: 12px;
+    height: 12px;
+    left: 0;
+    top: 0;
+    transition: transform 0.3s cubic-bezier(0.46, 0.1, 0.29, 1);
+    overflow: hidden;
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      left: 0;
+      top: 50%;
+      margin-top: -1px;
+      background-color: #000;
+    }
+    &:after {
+      transform: rotate(90deg);
+      transition: transform 0.2s 0.3s cubic-bezier(0.55, 0.05, 0.22, 0.99);
+    }
+  }
+}

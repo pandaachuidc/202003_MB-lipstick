@@ -1,0 +1,77 @@
+
+//madia query 斷點範圍
+
+$pc-1920-media: 1920px;
+$pc-1280-media: 1280px;
+$pc-1024-media: 1024px;
+$pad-767-media: 767px;
+$phone-414-media: 414px;
+$phone-375-media: 375px;
+$phone-360-media: 360px;
+
+//pc
+@mixin pc-1920-width() {
+  @media screen and (max-width: $pc-1920-media) {
+    @content;
+  }
+}
+@mixin pc-1280-width() {
+  @media screen and (max-width: $pc-1280-media) {
+    @content;
+  }
+}
+@mixin pc-1024-width() {
+  @media screen and (max-width: $pc-1024-media) {
+    @content;
+  }
+}
+
+//pad
+@mixin pad-767-width() {
+  @media screen and (max-width: $pad-767-media) {
+    @content;
+  }
+}
+
+//phone
+@mixin phone-414-width() {
+  @media screen and (max-width: $phone-414-media) {
+    @content;
+  }
+}
+@mixin phone-375-width() {
+  @media screen and (max-width: $phone-375-media) {
+    @content;
+  }
+}
+@mixin phone-360-width() {
+  @media screen and (max-width: $phone-360-media) {
+    @content;
+  }
+}
+
+// /**
+//  * 實際引用
+
+//  *
+//       .div1{
+//                 //電腦版
+//               @include pc-width{
+//                       padding:20px;
+//               }
+//               //平板
+//               @include pad-width{
+//                     padding:10px;
+//                 }
+//               //小平板
+//               @include small-pad-width{
+//                     padding:5px;
+//                 }
+//               //手機
+//               @include phone-width{
+//                     padding:0px;
+//                 }
+//             }
+//  *
+//  * 
+//  */
