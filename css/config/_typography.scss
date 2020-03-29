@@ -1,15 +1,34 @@
 $base-font-size: 1rem;
 $base-line-height: 1.5;
-$font-xxl: $base-font-size * 2.25;
-$font-xl: $base-font-size * 1.5;
-$font-l: $base-font-size * 1.25;
-$font-m: $base-font-size;
-$font-s: $base-font-size * 0.8;
+$font-xxl: $base-font-size * 6;
+$font-xl: $base-font-size * 4.4;
+$font-l: $base-font-size * 3;
+$font-m: $base-font-size * 1.8;
+$font-s: $base-font-size * 1.2;
+$font-xs: $base-font-size * 0.8;
+
+$base-font-size-ie: 10px;
+$font-xxl-ie: $base-font-size * 6;
+$font-xl-ie: $base-font-size * 4.4;
+$font-l-ie: $base-font-size * 3;
+$font-m-ie: $base-font-size * 1.8;
+$font-s-ie: $base-font-size * 1.2;
+$font-xs-ie: $base-font-size * 0.8;
+
+
+$dark-green: #008091;
+$pink: #de7482;
+
+
 
 //font
 // $font-title: Helvetica Neue, Regular;
 // $font-Neue: Helvetica Neue, Regular;
 // $font-times: Times, Regular;
+html{
+  font-size: 62.5%;
+}
+
 body {
   font-size: $base-font-size;
   line-height: $base-line-height;

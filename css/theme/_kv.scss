@@ -1,0 +1,46 @@
+.MB-lipstick-wrap {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    .MB-listick-kv {
+        position: relative;
+        .bg-img {
+            width: 100%;
+            background: url(../images/kv-bg-pc.jpg) no-repeat top center;
+            background-size: 100%;
+        }
+        .content {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 1;
+            h2{
+              font-size: $font-l-ie;
+              font-size: $font-l;
+            }
+            .shine-font {
+              background: -webkit-linear-gradient(
+                left,
+                #12cac3 0%,
+                #71ebe6 24%,
+                #12cac3 36%,
+                #71ebe6 46%,
+                #12cac3 52%,
+                #71ebe6 58%,
+                #71ebe6 67%,
+                #12cac3 100%
+              );
+              background-size: 100%;
+              -webkit-transition: 1s;
+              -o-transition: 1s;
+              transition: 1s;
+              background-size: 300%;
+              animation: font-shine 10s infinite;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+}

@@ -49,31 +49,14 @@
   }
 }
 
-@-webkit-keyframes btn-shine {
-  0% {
-    -webkit-transform: translateX(-150%);
-    transform: translateX(-150%);
-  }
-  70% {
-    -webkit-transform: translateX(120%);
-    transform: translateX(120%);
-  }
-  100% {
-    -webkit-transform: translateX(120%);
-    transform: translateX(120%);
-  }
-}
 @keyframes btn-shine {
   0% {
-    -webkit-transform: translateX(-150%);
     transform: translateX(-150%);
   }
   70% {
-    -webkit-transform: translateX(120%);
     transform: translateX(120%);
   }
   100% {
-    -webkit-transform: translateX(120%);
     transform: translateX(120%);
   }
 }

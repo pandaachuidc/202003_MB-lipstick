@@ -1,4 +1,3 @@
-
 //madia query 斷點範圍
 
 $pc-1920-media: 1920px;
@@ -8,6 +7,7 @@ $pad-767-media: 767px;
 $phone-414-media: 414px;
 $phone-375-media: 375px;
 $phone-360-media: 360px;
+
 
 //pc
 @mixin pc-1920-width() {
@@ -75,3 +75,20 @@ $phone-360-media: 360px;
 //  *
 //  * 
 //  */
+
+
+.pc{
+  display: block;
+}
+.mb{
+  display: none;
+}
+
+@include pad-767-width{
+  .pc{
+    display: none;
+  }
+  .mb{
+    display: block;
+  }
+}
