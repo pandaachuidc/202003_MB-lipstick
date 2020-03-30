@@ -24,3 +24,32 @@ if ($(window).width() <= 767) {
     });
   });
 }
+
+
+//animation-active
+
+var controller = new ScrollMagic.Controller();
+
+
+$(".MB-listick-intro").each(function(){
+  var introTitle =  $(this).find(".MB-listick-intro__tit");
+  var introText =  $(this).find(".MB-listick-intro__text");
+  
+var animateIn = new TimelineMax();
+  
+animateIn
+
+.from(introTitle, 1, {scaleY:0, tranfromOrigin: "bottom left"}, "-=1.5")
+
+.from(introText, 0.3, {autoAlpha:0, y:30, ease: Power4. easeOut}, "-=0.8")
+
+// Make a scrollMagic Scene
+
+var scene = new ScrollMagic.Scene({
+  triggerElement: this,
+})
+
+// .addIndicators()
+.setTween(animateIn).addTo(controller);
+
+});
