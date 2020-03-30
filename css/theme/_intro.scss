@@ -1,0 +1,83 @@
+.MB-listick-intro {
+  position: relative;
+  .bg-img {
+    width: 100%;
+    background: url(../images/intro-bg-pc.jpg) no-repeat top center;
+    background-size: 100%;
+  }
+  .content {
+    position: absolute;
+    top: 44%;
+    right: 0;
+    // left: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 47%;
+    margin: 0 4.5%;
+  }
+  &__text-wrap {
+    margin-bottom: 3.5em;
+  }
+  &__text {
+    font-size: $font-ms;
+    margin-top: 0.5em;
+    line-height: 1.8;
+    letter-spacing: 2px;
+  }
+}
+
+@include pad-767-width {
+  .MB-listick-intro {
+    .bg-img {
+      width: 100%;
+      background: url(../images/intro-bg-mb.jpg) no-repeat top center;
+      background-size: 100%;
+    }
+    .content {
+      top: 50%;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    &__text-wrap {
+      // margin-bottom: 3.5em;
+      padding: 0 5% ;
+      &:nth-of-type(1){
+        background: rgba(255, 255, 255 ,0.8)  ;
+        padding-top: 5em;
+      }
+    }
+    // &__text {
+      // font-size: $font-ms;
+      // margin-top: 0.5em;
+      // line-height: 1.8;
+      // letter-spacing: 2px;
+    // }
+  }
+}
+
+@include phone-414-width {
+  .MB-listick-intro {
+    .content {
+      top: 46%;
+      // margin: 0;
+      // padding: 0;
+    }
+    &__text-wrap {
+      margin-bottom: 1.5em;
+      // padding: 0 5% ;
+      &:nth-of-type(1){
+        padding-top: 1.5em;
+      }
+    }
+    &__tit{
+      width: 55%;
+    }
+    &__text {
+      font-size: $font-ms - 6;
+      // margin-top: 0.5em;
+      line-height: 1.5;
+      // letter-spacing: 2px;
+    }
+  }
+}

@@ -1,22 +1,35 @@
-$base-font-size: 1rem;
+// $base-font-size: 1rem;
+// $base-line-height: 1.5;
+// $font-xxl: $base-font-size * 5;
+// $font-xl: $base-font-size * 4.4;
+// $font-l: $base-font-size * 3;
+// $font-m: $base-font-size * 2.5;
+// $font-ms: $base-font-size * 2.2;
+// $font-s: $base-font-size * 1.2;
+// $font-xs: $base-font-size * 0.8;
+
+// $base-font-size-ie: 10px;
+// $font-xxl-ie: $base-font-size-ie * 5;
+// $font-xl-ie: $base-font-size-ie * 4.4;
+// $font-l-ie: $base-font-size-ie * 3;
+// $font-m-ie: $base-font-size-ie * 2.5;
+// $font-ms-ie: $base-font-size-ie * 2.2;
+// $font-s-ie: $base-font-size-ie * 1.2;
+// $font-xs-ie: $base-font-size-ie * 0.8;
+
+
+
 $base-line-height: 1.5;
-$font-xxl: $base-font-size * 6;
-$font-xl: $base-font-size * 4.4;
-$font-l: $base-font-size * 3;
-$font-m: $base-font-size * 1.8;
-$font-s: $base-font-size * 1.2;
-$font-xs: $base-font-size * 0.8;
-
-$base-font-size-ie: 10px;
-$font-xxl-ie: $base-font-size * 6;
-$font-xl-ie: $base-font-size * 4.4;
-$font-l-ie: $base-font-size * 3;
-$font-m-ie: $base-font-size * 1.8;
-$font-s-ie: $base-font-size * 1.2;
-$font-xs-ie: $base-font-size * 0.8;
-
+$font-xxl: 50px;
+$font-xl: 44px;
+$font-l: 30px;
+$font-m: 25px;
+$font-ms: 22px;
+$font-s: 12px;
+$font-xs: 8px;
 
 $dark-green: #008091;
+$light-green:#71ebe6;
 $pink: #de7482;
 
 
@@ -25,14 +38,16 @@ $pink: #de7482;
 // $font-title: Helvetica Neue, Regular;
 // $font-Neue: Helvetica Neue, Regular;
 // $font-times: Times, Regular;
-html{
-  font-size: 62.5%;
-}
+// html{
+//   font-size: 62.5%;
+//   color: #2a2a2a;
+// }
 
-body {
-  font-size: $base-font-size;
-  line-height: $base-line-height;
+// body {
+  // font-size: $base-font-size;
+  // line-height: $base-line-height;
   // -webkit-font-smoothing: antialiased;
   // -moz-osx-font-smoothing: grayscale;
-  font-family: Microsoft JhengHei,微軟正黑體,serif;
-}
+  // font-family: Microsoft JhengHei,微軟正黑體,serif;
+
+// }

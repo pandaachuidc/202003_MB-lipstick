@@ -1,46 +1,26 @@
-var controller = new ScrollMagic.Controller();
-var animateIn = new TimelineMax();
-animateIn
-  .fromTo(
-    ".overlay",
-    2,
-    { skewX: 30, scale: 1.5 },
-    {
-      skewX: 0,
-      xPercent: 100,
-      transformOrigin: "0% 100%",
-      ease: Power4.easeOut
-    }
-  )
+// slick slider
 
-  .from(
-    ".project-info",
-    1,
-    { scaleY: 0, tranfromOrigin: "bottom left" },
-    "-=1.5"
-  )
+if ($(window).width() <= 767) {
+  $(document).ready(function() {
+    var $slider = $(".MB-listick-color__slider");
+    var $progressBar = $(".MB-listick-color__progress");
+    var $progressBarLabel = $(".slider__label");
 
-  .from(
-    ".small-title",
-    0.3,
-    { autoAlpha: 0, y: 30, ease: Power4.easeOut },
-    "-=0.8"
-  )
+    $slider.on("beforeChange", function(event, slick, currentSlide, nextSlide) {
+      var calc = (nextSlide / (slick.slideCount - 1)) * 100;
 
-  .from(
-    ".project-link",
-    0.3,
-    { autoAlpha: 0, y: 30, ease: Power4.easeOut },
-    "-=0.8"
-  )
+      $progressBar
+        .css("background-size", calc + "% 100%")
+        .attr("aria-valuenow", calc);
 
-  .from("h4", 0.3, { autoAlpha: 0, y: 30, ease: Power4.easeOut }, "-=0.8");
+      $progressBarLabel.text(calc + "% completed");
+    });
 
-// Make a scrollMagic Scene
-
-var scene = new ScrollMagic.Scene({
-  triggerElement: ".project"
-})
-
-  .setTween(animateIn)
-  .addTo(controller);
+    $slider.slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      speed: 800
+    });
+  });
+}

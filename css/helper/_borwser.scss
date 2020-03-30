@@ -86,9 +86,9 @@ $phone-360-media: 360px;
 
 @include pad-767-width{
   .pc{
-    display: none;
+    display: none !important;
   }
   .mb{
-    display: block;
+    display: block ;
   }
 }

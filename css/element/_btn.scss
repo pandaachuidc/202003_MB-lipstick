@@ -54,10 +54,9 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     color: #fff;
     background: #000;
     text-align: center;
-    padding: 1.2rem 4.5rem;
+    padding: 0.6em 2.8em;
     display: inline-block;
-    font-size: $font-m-ie;
-    font-size: $font-m;
+    font-size: $font-m - 4;
     letter-spacing: 0.1em;
     border: 1px solid #000;
     box-shadow: 0 0 10px #fff;
@@ -84,5 +83,12 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
         background: #fff;
         color: #000;
       }
+  }
+}
+
+
+@include phone-414-width {
+  .lancome-btn__link--s{
+    font-size: $font-s + 4;
   }
 }
