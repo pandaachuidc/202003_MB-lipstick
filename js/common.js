@@ -31,25 +31,36 @@ if ($(window).width() <= 767) {
 var controller = new ScrollMagic.Controller();
 
 
-$(".MB-listick-intro").each(function(){
-  var introTitle =  $(this).find(".MB-listick-intro__tit");
-  var introText =  $(this).find(".MB-listick-intro__text");
-  
-var animateIn = new TimelineMax();
-  
-animateIn
+$(".MB-listick-intro__text-wrap").each(function() {
+  var introTitle = $(this).find(".MB-listick-intro__tit");
+  var introText = $(this).find(".MB-listick-intro__text");
+  // var introWrap = $(this).find(".MB-listick-intro__text-wrap");
+  // var typoMB = $(this).find(".MB-listick-kv__typo-MB");
 
-.from(introTitle, 1, {scaleY:0, tranfromOrigin: "bottom left"}, "-=1.5")
+  var animateIn = new TimelineMax();
 
-.from(introText, 0.3, {autoAlpha:0, y:30, ease: Power4. easeOut}, "-=0.8")
+  animateIn
 
-// Make a scrollMagic Scene
+    .from(
+      introTitle,
+      { opacity: 0, y: 100, duration: 1, ease: Power4.easeOut },
+      "-=1.5"
+    )
+    .from(
+      introText,
+      { opacity: 0, y: 100, duration: 1, ease: Power4.easeOut },
+      "-=1.5"
+    );
 
-var scene = new ScrollMagic.Scene({
-  triggerElement: this,
-})
+  // .from(introWrap, { opacity: 0, y: 100, duration: 2, stagger: 1,delay:3})
+  // .from(typoMB, { opacity: 0, y: 100, duration: 2 })
 
-// .addIndicators()
-.setTween(animateIn).addTo(controller);
+  // Make a scrollMagic Scene
+  var scene = new ScrollMagic.Scene({
+    triggerElement: this
+  })
 
+    // .addIndicators()
+    .setTween(animateIn)
+    .addTo(controller);
 });

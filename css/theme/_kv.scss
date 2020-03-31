@@ -5,7 +5,7 @@
   overflow: hidden;
   line-height: $base-line-height;
   color: #2a2a2a;
-  img{
+  img {
     max-width: 100%;
   }
   .MB-listick-kv {
@@ -89,6 +89,19 @@
   }
 }
 
+@include pc-1024-width {
+  .MB-lipstick-wrap {
+    .MB-listick-kv {
+      .content {
+        margin-left: 3%;
+      }
+      &__product-pic {
+        width: 50%;
+      }
+    }
+  }
+}
+
 @include pad-767-width {
   .MB-lipstick-wrap {
     .MB-listick-kv {
@@ -110,11 +123,11 @@
       //   width: 385px;
       // }
       // &__color-name {
-        // font-size: $font-m;
-        // font-weight: bold;
-        // text-align: left;
-        // top: 17%;
-        // left: 63%;
+      // font-size: $font-m;
+      // font-weight: bold;
+      // text-align: left;
+      // top: 17%;
+      // left: 63%;
       // }
       &__name {
         // margin-bottom: 1.5em;
@@ -157,7 +170,7 @@
       &__product {
         width: 50%;
       }
-      &__product-pic{
+      &__product-pic {
         width: 66%;
       }
       &__color-name {

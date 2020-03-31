@@ -510,6 +510,12 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
       top: 79%;
       left: 7%; }
 
+@media screen and (max-width: 1024px) {
+  .MB-lipstick-wrap .MB-listick-kv .content {
+    margin-left: 3%; }
+  .MB-lipstick-wrap .MB-listick-kv__product-pic {
+    width: 50%; } }
+
 @media screen and (max-width: 767px) {
   .MB-lipstick-wrap .MB-listick-kv .bg-img {
     width: 100%;
@@ -583,6 +589,10 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     line-height: 1.8;
     letter-spacing: 2px; }
 
+@media screen and (max-width: 1024px) {
+  .MB-listick-intro .content {
+    top: 35%; } }
+
 @media screen and (max-width: 767px) {
   .MB-listick-intro .bg-img {
     width: 100%;
@@ -651,6 +661,12 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     margin-bottom: 4em; }
   .MB-listick-color__slider-pic {
     width: 100%; }
+
+@media screen and (max-width: 1024px) {
+  .MB-listick-color .content {
+    top: 18%; }
+  .MB-listick-color__visual-pic {
+    width: 33%; } }
 
 @media screen and (max-width: 767px) {
   .MB-listick-color .bg-img {

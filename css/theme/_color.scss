@@ -41,6 +41,18 @@
   }
 }
 
+@include pc-1024-width {
+   .MB-listick-color {
+     .content {
+      top: 18%;
+    }
+     &__visual-pic{
+       width: 33%;
+     }
+   }
+  
+}
+
 @include pad-767-width {
   .MB-listick-color {
     .bg-img {
