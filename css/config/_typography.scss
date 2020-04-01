@@ -32,6 +32,27 @@ $dark-green: #008091;
 $light-green:#71ebe6;
 $pink: #de7482;
 
+.color-text {
+    background: -webkit-linear-gradient(left,  #12cac3 0%,
+          #71ebe6 24%,
+          #12cac3 36%,
+          #71ebe6 46%,
+          #12cac3 52%,
+          #71ebe6 58%,
+          #71ebe6 67%,
+          #12cac3 100%);
+    background-size: 400% 400%;
+    background-clip: text;
+    -webkit-background-clip: -webkit-text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    animation-name: colorText;
+    animation-duration: 8s;
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
 
 
 //font

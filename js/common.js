@@ -25,17 +25,13 @@ if ($(window).width() <= 767) {
   });
 }
 
-
 //animation-active
 
 var controller = new ScrollMagic.Controller();
 
-
 $(".MB-listick-intro__text-wrap").each(function() {
   var introTitle = $(this).find(".MB-listick-intro__tit");
   var introText = $(this).find(".MB-listick-intro__text");
-  // var introWrap = $(this).find(".MB-listick-intro__text-wrap");
-  // var typoMB = $(this).find(".MB-listick-kv__typo-MB");
 
   var animateIn = new TimelineMax();
 
@@ -52,9 +48,6 @@ $(".MB-listick-intro__text-wrap").each(function() {
       "-=1.5"
     );
 
-  // .from(introWrap, { opacity: 0, y: 100, duration: 2, stagger: 1,delay:3})
-  // .from(typoMB, { opacity: 0, y: 100, duration: 2 })
-
   // Make a scrollMagic Scene
   var scene = new ScrollMagic.Scene({
     triggerElement: this
@@ -64,3 +57,69 @@ $(".MB-listick-intro__text-wrap").each(function() {
     .setTween(animateIn)
     .addTo(controller);
 });
+
+if ($(window).width() >= 767) {
+  $(".MB-listick-color__slider").each(function() {
+    var sliderItem = $(this).find(".MB-listick-color__item");
+    var animateIn = new TimelineMax();
+
+    animateIn.from(sliderItem, {
+      opacity: 0,
+      y: 100,
+      duration: 1,
+      stagger: 0.5
+    });
+
+    // Make a scrollMagic Scene
+    var scene = new ScrollMagic.Scene({
+      triggerElement: this
+    })
+
+      // .addIndicators()
+      .setTween(animateIn)
+      .addTo(controller);
+  });
+}
+
+// var controller = new ScrollMagic.Controller();
+
+// // Create scenes in jQuery each() loop
+// $(".content").each(function(i) {
+//   var introTitle = $(this).find(".MB-listick-intro__tit");
+//   var introText = $(this).find(".MB-listick-intro__text");
+//   var sliderItem = $(this).find(".MB-listick-color__item");
+//   var tl = new TimelineMax();
+
+//   tl.from(introTitle, { scaleX: 0, duration: 0.25 });
+//   tl.from(introText, { yPercent: 100, duration: 0.65, ease: Back.easeOut });
+//   tl.from(sliderItem, { opacity: 0, y: 100, duration: 0.85, stagger: 0.5 });
+
+//   new ScrollMagic.Scene({
+//     triggerElement: this,
+//     triggerHook: 0.65
+//   })
+//     .setTween(tl)
+//     .addIndicators({
+//       colorTrigger: "black",
+//       colorStart: "black",
+//       colorEnd: "black",
+//       indent: 40
+//     })
+//     .addTo(controller);
+// });
+
+//   新建ScrollMagic場景對象
+
+// 說明：
+
+// triggerElement：觸發元素，即當滾動條Trigger滾動到該元素時，觸發動畫
+
+// offset：用於設置Trigger與TriggerElement的距離，正值在下，負值在上。比如：offset:100 指的是Tigger在該觸發元素的下面100px的位置
+
+// triggerHook（0~1）：用於設置實際觸發元素的位置，默認是0，即與實際元素頂端重合，若為1，則與實際元素底端重合。
+
+// addIndicators：用於調試使用。
+
+// 最後一定要加入我們創建的ScrollMagic控制器：
+
+// addTo(scrollMagicController);

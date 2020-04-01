@@ -36,25 +36,30 @@
     padding: 0 2%;
     margin-bottom: 4em;
   }
+  .m-r{
+    margin-right: 33.3333%;
+  }
   &__slider-pic {
     width: 100%;
   }
 }
 
 @include pc-1024-width {
-   .MB-listick-color {
-     .content {
+  .MB-listick-color {
+    .content {
       top: 18%;
     }
-     &__visual-pic{
-       width: 33%;
-     }
-   }
-  
+    &__visual-pic {
+      width: 33%;
+    }
+  }
 }
 
 @include pad-767-width {
   .MB-listick-color {
+    .m-r{
+    margin-right: 0;
+  }
     .bg-img {
       width: 100%;
       background: url(../images/color-bg-mb.jpg) no-repeat top center;
@@ -76,7 +81,7 @@
     &__slider {
       display: block;
       width: 100%;
-      margin:0;
+      margin: 0;
       .slick-next,
       .slick-prev {
         width: 28px;
@@ -92,7 +97,7 @@
           height: 100%;
         }
       }
-      .slick-prev  {
+      .slick-prev {
         &:before {
           content: "";
           background: url(../images/left-arrow.png) no-repeat center center;
@@ -110,19 +115,18 @@
     }
     &__progress {
       display: block;
-      width: 100%;
-      height: 3px;
+      width: 50%;
+      margin: 0 auto;
+      height: 2px;
       overflow: hidden;
       background-color: #f5f5f5;
-      background-image: linear-gradient(to right, $light-green, $light-green);
+      background-image: linear-gradient(to right, $dark-green, $dark-green);
       background-repeat: no-repeat;
       background-size: 0 100%;
       transition: background-size 0.4s ease-in-out;
     }
   }
 }
-
-
 
 @include phone-414-width {
   .MB-listick-color {
@@ -155,6 +159,13 @@
     }
     &__slider-pic {
       width: 100%;
+    }
+  }
+}
+@include phone-375-width {
+  .MB-listick-color {
+    &__visual-pic {
+      top: -39%;
     }
   }
 }

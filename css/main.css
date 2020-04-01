@@ -65,6 +65,23 @@ a {
 input:focus {
   outline: none; }
 
+.color-text {
+  background: -webkit-linear-gradient(left, #12cac3 0%, #71ebe6 24%, #12cac3 36%, #71ebe6 46%, #12cac3 52%, #71ebe6 58%, #71ebe6 67%, #12cac3 100%);
+  background-size: 400% 400%;
+  background-clip: text;
+  -webkit-background-clip: -webkit-text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  -webkit-animation-name: colorText;
+  animation-name: colorText;
+  -webkit-animation-duration: 8s;
+  animation-duration: 8s;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite; }
+
 /*------------------------------------*\
     $helper
 \*------------------------------------*/
@@ -185,7 +202,6 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     opacity: 0; }
   to {
     opacity: 1; } }
-
 @keyframes img_shine {
   0% {
     opacity: 0; }
@@ -206,7 +222,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
 
 @-webkit-keyframes flare_shine {
   0% {
-    opacity: 0.8; }
+    opacity: 0.5; }
   to {
     opacity: 1; } }
 
@@ -334,99 +350,6 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     -webkit-transform: scale(1, 1);
     transform: scale(1, 1); } }
 
-@-webkit-keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg); } }
-
-@keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg); } }
-
-[data-aos="text-down"] {
-  opacity: 0;
-  -webkit-transform: translateY(-25px);
-  -ms-transform: translateY(-25px);
-  transform: translateY(-25px);
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s; }
-  [data-aos="text-down"].aos-animate {
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s; }
-
-[data-aos="text-up"] {
-  opacity: 0;
-  -webkit-transform: translateY(25px);
-  -ms-transform: translateY(25px);
-  transform: translateY(25px);
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s; }
-  [data-aos="text-up"].aos-animate {
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s; }
-
-[data-aos="scale-photo"] {
-  opacity: 0;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s; }
-  [data-aos="scale-photo"].aos-animate {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
-    opacity: 1;
-    -webkit-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s; }
-
-[data-aos="move-left"] {
-  opacity: 0;
-  -webkit-transform: translateX(25px);
-  -ms-transform: translateX(25px);
-  transform: translateX(25px);
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s; }
-  [data-aos="move-left"].aos-animate {
-    -webkit-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transform: translateX(0);
-    opacity: 1;
-    -webkit-transition: all 0.5s;
-    -o-transition: all 0.5s;
-    transition: all 0.5s; }
-
-[data-aos="backgroundScale"] {
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
-  -webkit-transition: all 10s;
-  -o-transition: all 10s;
-  transition: all 10s; }
-  [data-aos="backgroundScale"].aos-animate {
-    -webkit-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    transform: scale(1.05);
-    -webkit-transition: all 10s;
-    -o-transition: all 10s;
-    transition: all 10s; }
-
 @-webkit-keyframes lineani {
   0% {
     opacity: 0.8; }
@@ -438,6 +361,22 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     opacity: 0.8; }
   100% {
     opacity: 1; } }
+
+@-webkit-keyframes colorText {
+  0% {
+    background-position: 0 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0 50%; } }
+
+@keyframes colorText {
+  0% {
+    background-position: 0 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0 50%; } }
 
 /*------------------------------------*\
     $theme
@@ -466,17 +405,6 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
       z-index: 1;
       margin-top: 5%;
       margin-left: 6.7%; }
-      .MB-lipstick-wrap .MB-listick-kv .content .shine-font {
-        background: -webkit-linear-gradient(left, #12cac3 0%, #71ebe6 24%, #12cac3 36%, #71ebe6 46%, #12cac3 52%, #71ebe6 58%, #71ebe6 67%, #12cac3 100%);
-        background-size: 100%;
-        -webkit-transition: 1s;
-        -o-transition: 1s;
-        transition: 1s;
-        background-size: 300%;
-        -webkit-animation: font-shine 10s infinite;
-        animation: font-shine 10s infinite;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent; }
     .MB-lipstick-wrap .MB-listick-kv__title {
       font-size: 30px;
       font-weight: bold;
@@ -496,12 +424,13 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
       left: 63%; }
     .MB-lipstick-wrap .MB-listick-kv__name {
       margin-bottom: 1.5em; }
+      .MB-lipstick-wrap .MB-listick-kv__name span {
+        vertical-align: middle; }
       .MB-lipstick-wrap .MB-listick-kv__name span:nth-of-type(1) {
         font-size: 22px;
         color: #008091;
         border: #008091 1px solid;
-        padding: 0 0.2em;
-        vertical-align: super; }
+        padding: 0 0.2em; }
       .MB-lipstick-wrap .MB-listick-kv__name span:nth-of-type(2) {
         font-size: 30px;
         color: #000; }
@@ -567,6 +496,14 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     .MB-lipstick-wrap .MB-listick-kv__name span:nth-of-type(2) {
       font-size: 18px; } }
 
+@media screen and (max-width: 375px) {
+  .MB-lipstick-wrap .MB-listick-kv__product {
+    width: 52%; }
+  .MB-lipstick-wrap .MB-listick-kv__name {
+    padding-left: 0.5em; }
+    .MB-lipstick-wrap .MB-listick-kv__name span:nth-of-type(1) {
+      font-size: 8px; } }
+
 .MB-listick-intro {
   position: relative; }
   .MB-listick-intro .bg-img {
@@ -611,7 +548,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
 
 @media screen and (max-width: 414px) {
   .MB-listick-intro .content {
-    top: 46%; }
+    top: 48.5%; }
   .MB-listick-intro__text-wrap {
     margin-bottom: 1.5em; }
     .MB-listick-intro__text-wrap:nth-of-type(1) {
@@ -659,6 +596,8 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     width: 33.33333%;
     padding: 0 2%;
     margin-bottom: 4em; }
+  .MB-listick-color .m-r {
+    margin-right: 33.3333%; }
   .MB-listick-color__slider-pic {
     width: 100%; }
 
@@ -669,6 +608,8 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     width: 33%; } }
 
 @media screen and (max-width: 767px) {
+  .MB-listick-color .m-r {
+    margin-right: 0; }
   .MB-listick-color .bg-img {
     width: 100%;
     background: url(../images/color-bg-mb.jpg) no-repeat top center;
@@ -709,14 +650,15 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     margin-bottom: 8em; }
   .MB-listick-color__progress {
     display: block;
-    width: 100%;
-    height: 3px;
+    width: 50%;
+    margin: 0 auto;
+    height: 2px;
     overflow: hidden;
     background-color: #f5f5f5;
-    background-image: -webkit-gradient(linear, left top, right top, from(#71ebe6), to(#71ebe6));
-    background-image: -webkit-linear-gradient(left, #71ebe6, #71ebe6);
-    background-image: -o-linear-gradient(left, #71ebe6, #71ebe6);
-    background-image: linear-gradient(to right, #71ebe6, #71ebe6);
+    background-image: -webkit-gradient(linear, left top, right top, from(#008091), to(#008091));
+    background-image: -webkit-linear-gradient(left, #008091, #008091);
+    background-image: -o-linear-gradient(left, #008091, #008091);
+    background-image: linear-gradient(to right, #008091, #008091);
     background-repeat: no-repeat;
     background-size: 0 100%;
     -webkit-transition: background-size 0.4s ease-in-out;
@@ -736,3 +678,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     margin-bottom: 2em; }
   .MB-listick-color__slider-pic {
     width: 100%; } }
+
+@media screen and (max-width: 375px) {
+  .MB-listick-color__visual-pic {
+    top: -39%; } }
