@@ -577,9 +577,24 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     top: -9%;
     left: -1%; }
   .MB-listick-color__visual-pic {
-    position: absolute;
     right: 0;
-    top: -11.3%; }
+    top: -11.3%;
+    width: 424px;
+    height: 600px;
+    position: absolute;
+    overflow: hidden; }
+    .MB-listick-color__visual-pic .layer {
+      position: absolute;
+      left: 0; }
+    .MB-listick-color__visual-pic .layer1 {
+      top: -50px;
+      z-index: 3; }
+    .MB-listick-color__visual-pic .layer2 {
+      top: -50px;
+      z-index: 2; }
+    .MB-listick-color__visual-pic .layer3 {
+      top: -70px;
+      max-width: 600px; }
   .MB-listick-color__slider {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -605,7 +620,10 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
   .MB-listick-color .content {
     top: 18%; }
   .MB-listick-color__visual-pic {
-    width: 33%; } }
+    width: 33%;
+    height: 470px; }
+    .MB-listick-color__visual-pic .layer3 {
+      max-width: 410px; } }
 
 @media screen and (max-width: 767px) {
   .MB-listick-color .m-r {
@@ -622,8 +640,14 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     left: -14%;
     z-index: 2; }
   .MB-listick-color__visual-pic {
-    right: -13%;
-    top: -38%; }
+    right: -15%;
+    top: -30%;
+    width: 69%;
+    height: 27%; }
+    .MB-listick-color__visual-pic .layer1 {
+      top: -193px; }
+    .MB-listick-color__visual-pic .layer2 {
+      top: -175px; }
   .MB-listick-color__slider {
     display: block;
     width: 100%;
@@ -672,8 +696,11 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
     top: -16%;
     width: 70%; }
   .MB-listick-color__visual-pic {
-    top: -46%;
-    width: 80%; }
+    top: -36%;
+    width: 87%;
+    height: 30%; }
+    .MB-listick-color__visual-pic .layer1 {
+      top: -162px; }
   .MB-listick-color__item {
     margin-bottom: 2em; }
   .MB-listick-color__slider-pic {
@@ -681,4 +708,7 @@ https://github.com/yahoo/pure/blob/master/LICENSE.md
 
 @media screen and (max-width: 375px) {
   .MB-listick-color__visual-pic {
-    top: -39%; } }
+    top: -30%;
+    height: 26%; }
+    .MB-listick-color__visual-pic .layer1 {
+      top: -151px; } }

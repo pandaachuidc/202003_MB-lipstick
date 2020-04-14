@@ -18,10 +18,37 @@
     top: -9%;
     left: -1%;
   }
+  // &__visual-pic {
+  //   position: absolute;
+  //   right: 0;
+  //   top: -11.3%;
+  // }
   &__visual-pic {
-    position: absolute;
     right: 0;
     top: -11.3%;
+    width: 424px;
+    height: 600px;
+    // width: 33%;
+    // height: 46%;
+    position: absolute;
+    overflow: hidden;
+    .layer {
+      position: absolute;
+      left: 0;
+    }
+    .layer1 {
+      top: -50px;
+
+      z-index: 3;
+    }
+    .layer2 {
+      top: -50px;
+      z-index: 2;
+    }
+    .layer3 {
+      top: -70px;
+      max-width: 600px;
+    }
   }
   &__slider {
     display: flex;
@@ -36,7 +63,7 @@
     padding: 0 2%;
     margin-bottom: 4em;
   }
-  .m-r{
+  .m-r {
     margin-right: 33.3333%;
   }
   &__slider-pic {
@@ -51,15 +78,19 @@
     }
     &__visual-pic {
       width: 33%;
+      height: 470px;
+      .layer3 {
+        max-width: 410px;
+      }
     }
   }
 }
 
 @include pad-767-width {
   .MB-listick-color {
-    .m-r{
-    margin-right: 0;
-  }
+    .m-r {
+      margin-right: 0;
+    }
     .bg-img {
       width: 100%;
       background: url(../images/color-bg-mb.jpg) no-repeat top center;
@@ -75,8 +106,16 @@
       z-index: 2;
     }
     &__visual-pic {
-      right: -13%;
-      top: -38%;
+      right: -15%;
+      top: -30%;
+      width: 69%;
+      height: 27%;
+      .layer1 {
+        top: -193px;
+      }
+      .layer2 {
+        top: -175px;
+      }
     }
     &__slider {
       display: block;
@@ -140,9 +179,12 @@
       width: 70%;
     }
     &__visual-pic {
-      // right: -13%;
-      top: -46%;
-      width: 80%;
+      top: -36%;
+      width: 87%;
+      height: 30%;
+      .layer1 {
+        top: -162px;
+      }
     }
     // &__slider {
     //   .slick-next,
@@ -165,7 +207,11 @@
 @include phone-375-width {
   .MB-listick-color {
     &__visual-pic {
-      top: -39%;
+      top: -30%;
+      height: 26%;
+      .layer1{
+        top: -151px;
+      }
     }
   }
 }

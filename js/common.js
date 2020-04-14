@@ -81,6 +81,21 @@ if ($(window).width() >= 767) {
   });
 }
 
+
+
+var controller = new ScrollMagic.Controller();
+var wrapBox = new TimelineMax().add([
+  TweenMax.to(".layer1", 1, { y: 360, ease: Linear.easeNone }),
+  TweenMax.to(".layer2", 1.2, { y: 280, ease: Linear.easeNone }),
+  TweenMax.to(".layer3", 0.8, { y: 180, ease: Linear.easeNone }),
+]);
+var scene = new ScrollMagic.Scene({
+  triggerElement: ".wrap-box",
+  duration: "150%",
+})
+  .setTween(wrapBox)
+  .addTo(controller);   
+
 // var controller = new ScrollMagic.Controller();
 
 // // Create scenes in jQuery each() loop
